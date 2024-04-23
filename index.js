@@ -17,6 +17,12 @@ const port = 5500;
 const {mongoURI , options} = require('./api/key')
 mongoose.connect(mongoURI, options).then(() => console.log("success")).catch(err => console.log("failure", err))
 
+mongoose.connect(uri, {
+    bufferCommands: false, // Disable buffering
+    bufferTimeoutMS: 10000, // Increase timeout to 10 seconds
+  });
+  
+
 
 //middleware why
 app.use(express.json());
