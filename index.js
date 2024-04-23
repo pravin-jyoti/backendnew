@@ -12,20 +12,6 @@ const todo = require('./schemas/oldUser');
 const app = express();
 const port = 5500;
 
-const uri = 'mongodb+srv://new_user_123:qwerty123@cluster0.xpfjogw.mongodb.net/'; // Replace 'mydatabase' with your actual database name
-
-// Connect to MongoDB using Mongoose
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-.then(() => {
-  console.log('MongoDB connected successfully');
-  // Your code here
-})
-.catch(err => {
-  console.error('MongoDB connection error:', err);
-});
 
 //DB connection
 const {mongoURI , options} = require('./api/key')
@@ -34,7 +20,7 @@ mongoose.connect(mongoURI, options).then(() => console.log("success")).catch(err
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 app.use(session({
-    secret  : 'sankeerth',
+    secret  : 'pravin',
     resave: false,
     saveUninitialized: true,
     cookie: {secure: false}
