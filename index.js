@@ -18,6 +18,7 @@ const {mongoURI , options} = require('./api/key')
 mongoose.connect(mongoURI, options).then(() => console.log("success")).catch(err => console.log("failure", err))
 
 
+
 //middleware why
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
