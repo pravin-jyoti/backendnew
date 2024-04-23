@@ -3,7 +3,7 @@ module.exports = {
     options: {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        serverSelectionTimeoutMS: 5000,
-        socketTimeoutMS: 45000
+        serverSelectionTimeoutMS: 500000,
+        socketTimeoutMS: 45000000
     }
 };
